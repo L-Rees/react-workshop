@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import Headline from '../components/Headline/Headline'
  
 class App extends Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
+  increment = () => {
+    // this.increment = this.increment.bind(this)
+    this.setState({count: this.state.count + 1 });
+  }
   render() {
     return (
-      <div>
-        <section>
-          <Headline isColor={true} text={"This is pink"}/>
-         
-        </section>
-        
-        <p>
-          This shouldn't be styled
-        </p>
-      </div>
+      <main>
+        {this.state.count}
+        <button onClick={this.increment}>
+          Increment
+        </button>
+      </main>
     );
   }
 }
