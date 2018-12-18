@@ -1,7 +1,7 @@
 import React from 'react'
-const Button = props => (
-    <button onClick={props.behavior}>
-         {props.textContent}
+const Button = ({behavior, textContent}) => (
+    <button onClick={behavior}>
+         {textContent}
     </button>
 )
 
